@@ -1,0 +1,11 @@
+# Informacoes basicas do projeto e destino no BigQuery
+secret_project_id: ""
+
+tiktok_secret_id: ""
+bq_secret_id: ""
+
+destination_project_id: ""
+destination_dataset: ""
+destination_table: ""
+
+timezone: "America/Sao_Paulo"
