@@ -12,10 +12,17 @@ app = FastAPI(
 )
 
 # CORS middleware for cloud deployment
+cors_origins_env = os.getenv("CORS_ORIGINS", "*")
+is_wildcard_origin = cors_origins_env.strip() == "*"
+if is_wildcard_origin:
+    cors_origins = ["*"]
+else:
+    cors_origins = [origin.strip() for origin in cors_origins_env.split(",") if origin.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=os.getenv("CORS_ORIGINS", "*").split(","),
-    allow_credentials=True,
+    allow_origins=cors_origins,
+    allow_credentials=not is_wildcard_origin,
     allow_methods=["*"],
     allow_headers=["*"],
 )
