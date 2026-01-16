@@ -1,0 +1,15 @@
+requests
+pandas
+loguru
+retry
+https://developers.google.com/static/search-ads/reporting/download/python/searchads360-py.tar.gz
+rtbhouse_sdk
+pendulum
+google-auth
+google-api-python-client
+google-ads==27.0.0
+bingads
+google-cloud-bigquery
+pandas_gbq
+google-analytics-data
+google-cloud-secret-manager

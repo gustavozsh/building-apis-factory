@@ -1,0 +1,7 @@
+__pycache__
+.history
+build
+dist
+cadastra_core.egg-info
+.venv
+.vscode
