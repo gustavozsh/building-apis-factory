@@ -7,7 +7,7 @@
   "containerDefinitions": [
     {
       "name": "building-apis-factory",
-      "image": "YOUR_ACCOUNT.dkr.ecr.us-east-1.amazonaws.com/building-apis-factory:latest",
+      "image": "YOUR_ACCOUNT.dkr.ecr.us-east-1.amazonaws.com/building-apis-factory:VERSION_TAG",
       "portMappings": [
         {
           "containerPort": 8000,
@@ -18,6 +18,10 @@
         {
           "name": "ENV",
           "value": "production"
+        },
+        {
+          "name": "CORS_ORIGINS",
+          "value": "https://yourdomain.com"
         }
       ],
       "logConfiguration": {

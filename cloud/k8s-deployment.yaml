@@ -16,12 +16,16 @@ spec:
     spec:
       containers:
       - name: building-apis-factory
-        image: YOUR_REGISTRY/building-apis-factory:latest
+        # Replace YOUR_REGISTRY with actual registry (e.g., gcr.io/PROJECT_ID, YOUR_ACCOUNT.dkr.ecr.REGION.amazonaws.com)
+        # Replace VERSION_TAG with specific version (e.g., v1.0.0, commit SHA) - avoid using 'latest' in production
+        image: YOUR_REGISTRY/building-apis-factory:VERSION_TAG
         ports:
         - containerPort: 8000
         env:
         - name: ENV
           value: "production"
+        - name: CORS_ORIGINS
+          value: "https://yourdomain.com"
         resources:
           requests:
             memory: "256Mi"

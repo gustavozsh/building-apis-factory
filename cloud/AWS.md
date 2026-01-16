@@ -12,15 +12,17 @@
 # Authenticate Docker to ECR
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin YOUR_ACCOUNT.dkr.ecr.us-east-1.amazonaws.com
 
-# Build image
+# Build image with version tag
 docker build -t building-apis-factory .
 
-# Tag image
-docker tag building-apis-factory:latest YOUR_ACCOUNT.dkr.ecr.us-east-1.amazonaws.com/building-apis-factory:latest
+# Tag image (replace VERSION_TAG with actual version like v1.0.0, commit SHA, or build number)
+docker tag building-apis-factory:latest YOUR_ACCOUNT.dkr.ecr.us-east-1.amazonaws.com/building-apis-factory:VERSION_TAG
 
 # Push image
-docker push YOUR_ACCOUNT.dkr.ecr.us-east-1.amazonaws.com/building-apis-factory:latest
+docker push YOUR_ACCOUNT.dkr.ecr.us-east-1.amazonaws.com/building-apis-factory:VERSION_TAG
 ```
+
+**Note**: Replace `YOUR_ACCOUNT` with your AWS account ID and `VERSION_TAG` with a specific version (e.g., `v1.0.0`, `${GIT_COMMIT_SHA}`, etc.). Avoid using `latest` in production.
 
 ### ECS Task Definition
 See `ecs-task-definition.json` for the complete task definition.
