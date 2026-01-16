@@ -1,7 +1,4 @@
 <!-- omit from toc -->
-# cadastra_core
-Proprietary Cadastra library for all things data: integration, security, quality and much more!
-
 <!-- omit from toc -->
 ## Table of contents
 - [Changelog](#changelog)
@@ -16,20 +13,7 @@ Proprietary Cadastra library for all things data: integration, security, quality
 The changelog is available [HERE IN THIS FILE.](./CHANGELOG.md)
 ## Available modules
 These are the currently available modules. To learn how to use them, refer to the respective README file by clicking the links.
-- [Amazon Ads](./cadastra_core/AmazonAds/)
-- [BigQuery](./cadastra_core/BigQuery/)
-- [Bing Ads](./cadastra_core/Bing/)
-- [Criteo](./cadastra_core/Criteo/)
-- [DV360](./cadastra_core/DV360/)
-- [Google Ads](./cadastra_core/GoogleAds/)
-- [Google Analytics 4](./cadastra_core/GoogleAnalytics4/)
-- [Meta](./cadastra_core/Meta/)
-- [Mercado Livre](./cadastra_core/MercadoLivre/)
-- [RTB House](./cadastra_core/Rtbhouse/)
-- [Search Ads 360](./cadastra_core/SearchAds360/)
-- [Secret Manager](./cadastra_core/SecretManager/)
-- [TikTok](./cadastra_core/TikTok/)
-- [Utilities](./cadastra_core/Utils/)
+
 
 ## Configuring Artifact Registry
 
@@ -129,5 +113,3 @@ For example, when deploying to Google Cloud Run Functions, your requirements.txt
 cadastra_core
 functions-framework==3.*
 ```
-
-**This package won't work if used outside our Google Cloud projects or in a machine with a user that's not allowed to access our private repo.**
